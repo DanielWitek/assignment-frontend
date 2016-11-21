@@ -32,6 +32,6 @@ export function graduationYear(email) {
 	if (level(email)=="BA"){
 		return parseInt(gradyear[0]) + 3;
 	}
-	return parseInt(gradyear[0]) + 3;
+	return parseInt(gradyear[0]) + 2;
 	
 }
