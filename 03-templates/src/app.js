@@ -50,8 +50,6 @@ function players(ctx) {
   }
 }
 
-}
-
 function notFound() {
   $app.html(notFoundTpl())
 }
