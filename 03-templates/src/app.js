@@ -7,7 +7,7 @@ import playerTpl from './templates/player.hbs'
 
 const $app = $('#app')
 
-const players = {
+var players = {
   'sergey': {
     name: 'Sergey Karjakin',
     image: 'https://cdn.worldchess.com/static/img/nyfide/karjakin_2x.png',
@@ -35,8 +35,8 @@ function contact() {
   $app.html(contactTpl())
 }
 
-function players(ctx) {
-  const player = players[ctx.params.player];
+function ThePlayers(ctx) {
+  let player = players[ctx.params.player];
   if(player==undefined)
   {
     notFound();
@@ -55,7 +55,7 @@ function notFound() {
 }
 
 router('/', index)
-router('/players/:player', players)
+router('/players/:player', ThePlayers)
 router('/contact', contact)
 router('*', notFound)
 router()
