@@ -6,5 +6,5 @@ export function es5() {
 }
 
 export function es6() {
-	return uuid();
+	return uuid()
 }
