@@ -12,8 +12,4 @@ export function es6() {
           resolve(val)
         }, 1)
     })
-
-	/*promise
-		.then (return val)
-		.catch (return err)*/
 }
