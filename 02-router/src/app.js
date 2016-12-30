@@ -3,7 +3,8 @@ import router from './router'
 import homeTpl from './templates/home.hbs'
 import contactTpl from './templates/contact.hbs'
 import notFoundTpl from './templates/not-found.hbs'
-import playerTpl from './templates/player.hbs'
+import sergeyTpl from './templates/sergey.hbs'
+import magnusTpl from './templates/magnus.hbs'
 
 const $app = $('#app')
 
@@ -19,15 +20,17 @@ function notFound() {
   $app.html(notFoundTpl())
 }
 
-function player(name) {
-  $app.html(playerTpl(
-      {name}
-  ));
+function sergey() {
+  $app.html(sergeyTpl())
 }
 
+function magnus() {
+  $app.html(magnusTpl())
+}
 
 router('/', index)
-router('/players/:player', player)
+router('/players/sergey', sergey)
+router('/players/magnus', magnus)
 router('/contact', contact)
 router('*', notFound)
 router()
